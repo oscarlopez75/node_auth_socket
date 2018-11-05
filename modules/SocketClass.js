@@ -58,9 +58,8 @@ class SocketClass {
 
 
     this.socket.conn.on('packet', (packet) =>{
-      if(packet.type === "ping"){
-        // console.log('Socket ' + socket.id + ' still connected');
-        console.log('User: ' + this.getConUser() + ' socketId: ' + this.getConSocketId());
+      if(packet.type === "ping"){        
+        console.log('User: ' + this.getConUser() + ' socketId: ' + this.getConSocketId() + ' still connected');
       }
 
     })

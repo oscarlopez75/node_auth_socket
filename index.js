@@ -39,10 +39,12 @@ io.on('connection', (socket) => {
   // console.log("New connection");
   // socketService(socket);
   let socketClass = new SocketClass(socket);
+  console.log('Number of connections ' + io.sockets.server.eio.clientsCount);
 
   socket.on("disconnect", () => {
     console.log('Socket ' + socket.id + ' disconnected');
-    socketClass = null;    
+    console.log('Number of connections ' + io.sockets.server.eio.clientsCount);
+    // socketClass = null;
   })
 });
 
